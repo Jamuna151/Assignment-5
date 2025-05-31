@@ -1,0 +1,18 @@
+import java.util.*;
+public class CharCount {
+	 static int count(String s, char ch, int i) {
+	        if (i == s.length()) return 0;
+	        if (s.charAt(i) == ch)
+	            return 1 + count(s, ch, i + 1);
+	        else
+	            return count(s, ch, i + 1);
+	    }
+
+	    public static void main(String[] args) {
+	        Scanner sc = new Scanner(System.in);
+	        System.out.println("Enter the String");
+	        String s = sc.nextLine();
+	        char ch = sc.next().charAt(0);
+	        System.out.println(count(s,ch,0));
+	        }
+}
