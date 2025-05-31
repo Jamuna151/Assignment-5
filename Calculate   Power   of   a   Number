@@ -1,0 +1,19 @@
+import java.util.*;
+public class Power_of_Number {
+	static int multiply(int a, int b) {
+        if (b == 0) {
+            return 1; 
+        }
+        return a * multiply(a, b - 1); 
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Number Value");
+        int a = sc.nextInt();
+        System.out.println("Enter the Power Value");
+        int b = sc.nextInt(); 
+        int result = multiply(a, b); 
+        System.out.println(result);
+        }
+
+}
